@@ -1,0 +1,46 @@
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #999999 ;
+}
+
+.mainDoge {
+	width: 40%;
+}
+
+label.upload-group {
+	width: 100px;
+	height: 40px;
+	color: white;
+	padding: 5 5 5 5;
+	text-align: center;
+	background-image: linear-gradient(to bottom,#337ab7 0,#265a88 100%); 
+}
+
+input#file {
+	width: 0.1px;
+	height: 0.1px;
+	position: absolute;
+	z-index: -1;
+}
+
+.contentImage {
+	width: 100%;
+}
+.contentCaption {
+	width: 100%;
+	font-size: 1em;
+	text-align: center;
+}
+
+#myInput {
+    background-image: url('style/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}

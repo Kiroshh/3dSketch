@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>ThreeDSketch</title>
+
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="icon" sizes="192x192" href="#">
+
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="#">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="#">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="$$hosted_libs_prefix$$/$$version$$/material.deep_purple-pink.min.css">
+    <link rel="stylesheet" href="style/webstyle.css">
+
+
+  
+  </head>
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color-text--white">     
+
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--grey-900">
+          <a href="home.html" class="mdl-layout__tab">Home</a>
+          <a href="profile.html" class="mdl-layout__tab is-active">Profiles</a>
+          <a href="addProfile.html" class="mdl-layout__tab">3d models</a>
+          <a href="gallery.html" class="mdl-layout__tab">Images</a>
+
+        </div>
+
+      </header>
+
+      <main class="mdl-layout__content">
+    <div class="page-content">
+<div>
+<br>
+<br><br>
+<br>
+<table  align="center" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+  <tr>
+    <td class="mdl-data-table__cell--non-numeric">ID: </td>
+    <td class="mdl-data-table__cell--non-numeric"><input type="text" name="id" id="user_id" autocomplete="off"></td>
+  </tr>
+  <tr>
+    <td class="mdl-data-table__cell--non-numeric">Criminal's Name:</td>
+    <td class="mdl-data-table__cell--non-numeric"><input type="text" name="user_name" id="user_name"></td>
+  </tr>
+  <tr>
+    <td class="mdl-data-table__cell--non-numeric">Age:</td>
+    <td class="mdl-data-table__cell--non-numeric"><input type="text" name="age" id="age"></td>
+  </tr>
+  <tr>
+    <td class="mdl-data-table__cell--non-numeric">Description:</td>
+    <td class="mdl-data-table__cell--non-numeric"><input type="text" name="desc" id="desc"></td>
+  </tr>
+  <tr>
+    <td class="mdl-data-table__cell--non-numeric">Image:</td>
+    <td class="mdl-data-table__cell--non-numeric"><input type="file" id="file"></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <button onclick="Save()">Save</button>
+      <button onclick="Update()">Update</button>
+      <button onclick="Delete()">Delete</button>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div>
+<h3 align="center">profiles</h3>
+
+ <input type="text" align="center" id="profilee" onkeyup="findProfile()" placeholder="Search for profiles by name..">
+
+<table align="center" id="tbl_users_list" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp"">
+  <tr>
+    <td class="mdl-data-table__cell--non-numeric">#ID</td>
+    <td class="mdl-data-table__cell--non-numeric">Name</td>
+    <td >Age</td>
+    <td >Description</td>
+
+  </tr>
+</table>
+</div>
+
+
+   </div>
+  </main>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+
+    <script >
+    // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBndOA5BIo0xys99VQGu3bVuBUy2Wb2HFw",
+    authDomain: "threedsketch.firebaseapp.com",
+    databaseURL: "https://threedsketch.firebaseio.com",
+    projectId: "threedsketch",
+    storageBucket: "threedsketch.appspot.com",
+    messagingSenderId: "831530143584"
+  };
+  firebase.initializeApp(config);
+
+</script>
+
+   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>  
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="script/profile.js"></script>
+
+  </body>
+</html>

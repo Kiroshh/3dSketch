@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>ThreeDSketch</title>
+
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="icon" sizes="192x192" href="#">
+
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="#">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="#">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="$$hosted_libs_prefix$$/$$version$$/material.deep_purple-pink.min.css">
+    <link rel="stylesheet" href="style/webstyle.css">
+
+
+  
+  </head>
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color-text--white">     
+
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--grey-900">
+          <a href="#overview" class="mdl-layout__tab is-active">Home</a>
+          <a href="profilee.html" class="mdl-layout__tab">Profiles</a>
+          <a href="addProfile.html" class="mdl-layout__tab">3d models</a>
+          <a href="gallery.html" class="mdl-layout__tab">Images</a>
+                    <button id="loggout"  onclick="logout()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored ">Logout</button>
+
+        </div>
+
+      </header>
+
+      <main class="mdl-layout__content">
+        <div class="mdl-layout__tab-panel is-active" id="overview">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--grey-900 mdl-color-text--white">
+              <i class="material-icons">people</i>
+            </header>
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text">
+                <h4>Profiles</h4>
+                  add new criminal profiles to the system or edit / delete existing profiles.
+              </div>
+              <div class="mdl-card__actions">
+                <a href="profilee.html" class="mdl-button">proceed</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+          <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--grey-900 mdl-color-text--white">
+              <i class="material-icons">visibility</i>
+            </header>
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text">
+                <h4>Models</h4>
+                Upload or download models from the storage.
+                View it.
+              </div>
+              <div class="mdl-card__actions">
+                <a href="addProfile.html" class="mdl-button">proceed</a>
+              </div>
+            </div>
+          </section>
+         
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+          <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--grey-900 mdl-color-text--white">
+              <i class="material-icons">face</i>
+            </header>
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text">
+                <h4>Gallery</h4>
+                    View the criminal profile images               </div>
+              <div class="mdl-card__actions">
+                <a href="gallery.html" class="mdl-button">proceed</a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <br><br>
+        
+        <footer class="mdl-mega-footer" >
+          <div class="mdl-mega-footer--middle-section">
+            
+            
+            <div class="mdl-mega-footer--drop-down-section">
+              <p class="mdl-mega-footer--heading">Contact </p>
+                <li>Tel: +94 771642550</li>
+                <li>Email: admin@gmail.com</li>
+            </div>
+          </div>
+          
+        </footer>
+      </main>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+
+    <script >
+    // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBndOA5BIo0xys99VQGu3bVuBUy2Wb2HFw",
+    authDomain: "threedsketch.firebaseapp.com",
+    databaseURL: "https://threedsketch.firebaseio.com",
+    projectId: "threedsketch",
+    storageBucket: "threedsketch.appspot.com",
+    messagingSenderId: "831530143584"
+  };
+  firebase.initializeApp(config);
+
+</script>
+
+   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script/home.js"></script>
+
+  </body>
+</html>

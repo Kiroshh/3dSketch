@@ -1,0 +1,86 @@
+            body {
+                font-family: Monospace;
+                background-color: #000000;
+                margin: 0px;
+                overflow: hidden;
+            }
+            #info {load
+                color: #fff;
+                position: absolute;
+                top: 10px;
+                width: 100%;
+                text-align: center;
+                z-index: 100;
+                display:block;
+            }
+            a { color: skyblue }
+            .button { background:#999; color:#eee; padding:0.2em 0.5em; cursor:pointer }
+            .highlight { background:orange; color:#fff; }
+            span {
+                display: inline-block;
+                width: 60px;
+                float: left;
+                text-align: center;
+            }
+
+            #nav{
+                position:absolute;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 700;
+                bottom:-50px;
+                left:0;   
+                cursor:pointer 
+            }
+            #measure{
+                position:absolute;
+                display: none;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 700;
+                bottom:-200px;
+                left:0;   
+                cursor:pointer 
+            }
+            #pauseani{
+                position:absolute;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 700;
+                bottom:-100px;
+                left:0;   
+                cursor:pointer 
+            }
+
+            #pickpoint{
+                position:absolute;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 700;
+                bottom:-150px;
+                left:0;   
+                cursor:pointer 
+            }
+
+            #filee{
+                position:absolute;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 700;
+                bottom: -50px;
+                left:0;   
+                cursor:pointer 
+            }
+            
+             #uploaddButton{
+                position:absolute;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 700;
+                bottom: -50px;
+                left:200px;   
+                cursor:pointer 
+            }
+
+            #txtarea{
+               position:absolute;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 700; 
+                left:0; 
+                bottom: -160px;  
+
+            }

@@ -1,0 +1,29 @@
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #999999;
+}
+#myInput {
+    background-image: url('style/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#profilee {
+   /* background-image: url('style/notebook.jpg'); /* Add a search icon to input */
+   /* background-position: 100px 120px; /* Position the search icon */
+   /* background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 40%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+    margin-left:  360px; 
+
+}

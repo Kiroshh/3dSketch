@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>ThreeDSketch</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="style/index.css" />
+
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>&nbsp;&nbsp;&nbsp;Welcome to ThreeDSketch </h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  
+
+<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+<script >
+    // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBndOA5BIo0xys99VQGu3bVuBUy2Wb2HFw",
+    authDomain: "threedsketch.firebaseapp.com",
+    databaseURL: "https://threedsketch.firebaseio.com",
+    projectId: "threedsketch",
+    storageBucket: "threedsketch.appspot.com",
+    messagingSenderId: "831530143584"
+  };
+  firebase.initializeApp(config);
+
+</script>
+<script src="script/index.js"></script>
+
+
+</body>
+</html>
