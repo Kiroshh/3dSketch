@@ -14,14 +14,14 @@ firebase.auth().onAuthStateChanged(function(user) {
     } else {
       // No user is signed in.
 
-      window.location = "index.html";
+      window.location = "index";
     }
 });
 
 function logout() {
 
          firebase.auth().signOut();
-               window.location = "index.html";
+               window.location = "index";
 
       }
 /*

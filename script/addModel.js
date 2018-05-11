@@ -9,7 +9,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       usermail = user.email;
     } else {
       // No user is signed in.
-      window.location = "index.html";
+      window.location = "index";
     }
 });
 

@@ -8,7 +8,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       let email_id = user.email;
       //document.getElementById("user_para").innerHTML = "logged in as User : " + email_id;
     }
-        window.location = "home.html";
+        window.location = "home";
 
   } else {
 
@@ -28,7 +28,7 @@ function login() {
     // Handle Errors here.
     const errorCode = error.code;
     const errorMessage = error.message;
-    window.alert("Error : " + errorMessage);
+    window.alert("Error iss : " + errorMessage);
    // window.location = "homes.html";
 
   });
