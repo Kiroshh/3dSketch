@@ -32,10 +32,19 @@ function queryDatabase(token) {
       image.src = currentObject.url;
       $(image).addClass("contentImage");
       var p = document.createElement("p");
-     $(p).html(currentObject.name);
+      let temp=currentObject.name;
+      temp=temp.slice(0, -4);
+      $(p).html(temp);
       $(p).addClass("contentCaption");
+      var aElem = document.createElement('a');
+      aElem.href="model.html"+ '#' + temp;
+      var aElemTN = document.createTextNode('view');
+      aElem.appendChild(aElemTN);
+      $(aElem).addClass("content link");
+
+      col.appendChild(aElem);
       $(col).append(image);
-     $(col).append(p);
+      $(col).append(p);
       $(currentRow).append(col);
     }
     
