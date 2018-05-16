@@ -231,3 +231,11 @@ html, body {
 .mdl-demo .mdl-menu__container {
   z-index: 99;
 }
+#tag{
+  position:sticky;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  bottom: -50px;
+  left:300px;   
+  cursor:pointer 
+}
