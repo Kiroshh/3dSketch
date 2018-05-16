@@ -53,7 +53,7 @@
 <table  align="center" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
   <tr>
     <td class="mdl-data-table__cell--non-numeric">ID: </td>
-    <td class="mdl-data-table__cell--non-numeric"><input type="number" name="id" id="user_id" autocomplete="off" min="1" max="1500"></td>
+    <td class="mdl-data-table__cell--non-numeric"><input type="text" name="id" id="user_id" autocomplete="off" min="1" max="1500"></td>
   </tr>
   <tr>
     <td class="mdl-data-table__cell--non-numeric">Criminal's Name:</td>
@@ -61,15 +61,15 @@
   </tr>
   <tr>
     <td class="mdl-data-table__cell--non-numeric">Age:</td>
-    <td class="mdl-data-table__cell--non-numeric"><input type="number" name="age" id="age" min="18" max="100"></td>
+    <td class="mdl-data-table__cell--non-numeric"><input type="text" name="age" id="age" min="18" max="100"></td>
   </tr>
   <tr>
     <td class="mdl-data-table__cell--non-numeric">Description:</td>
-    <td class="mdl-data-table__cell--non-numeric"><input type="text" name="desc" id="desc" minlength="5" maxlength="100"></td>
+    <td class="mdl-data-table__cell--non-numeric"><input type="text" name="desc" id="desc" ></td>
   </tr>
   <tr>
     <td class="mdl-data-table__cell--non-numeric">Image:</td>
-    <td class="mdl-data-table__cell--non-numeric"><input type="file" id="file" accept=".png, .jpg"></td>
+    <td class="mdl-data-table__cell--non-numeric"><input type="file" id="file"></td>
   </tr>
   <tr>
     <td colspan="2">
@@ -83,14 +83,15 @@
 
 </div>
 <div>
+ <!-- 
 <h3 align="center">profiles</h3>
  <select  id="tag" name="tag" > 
   <option value="1" selected >Name</option> 
   <option value="2" >Age</option>
   <option value="3">Height</option>
 </select>
- <input type="text" align="center" id="profilee" onkeyup="findProfile(tag.value)" placeholder="Search ">
-
+-->
+ <input type="text" align="center" id="profilee" onkeyup="findProfile()" placeholder="Search ">
 <table align="center" id="tbl_users_list" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp"">
   <tr>
     <td class="mdl-data-table__cell--non-numeric">#ID</td>
