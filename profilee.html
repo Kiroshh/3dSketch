@@ -49,26 +49,27 @@
 <br>
 <br><br>
 <br>
+<form>
 <table  align="center" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
   <tr>
     <td class="mdl-data-table__cell--non-numeric">ID: </td>
-    <td class="mdl-data-table__cell--non-numeric"><input type="text" name="id" id="user_id" autocomplete="off"></td>
+    <td class="mdl-data-table__cell--non-numeric"><input type="number" name="id" id="user_id" autocomplete="off" min="1" max="1500"></td>
   </tr>
   <tr>
     <td class="mdl-data-table__cell--non-numeric">Criminal's Name:</td>
-    <td class="mdl-data-table__cell--non-numeric"><input type="text" name="user_name" id="user_name"></td>
+    <td class="mdl-data-table__cell--non-numeric"><input type="text" name="user_name" id="user_name" required pattern="[A-Za-z]{1,15}"  minlength="3"  maxlength="25"></td>
   </tr>
   <tr>
     <td class="mdl-data-table__cell--non-numeric">Age:</td>
-    <td class="mdl-data-table__cell--non-numeric"><input type="text" name="age" id="age"></td>
+    <td class="mdl-data-table__cell--non-numeric"><input type="number" name="age" id="age" min="18" max="100"></td>
   </tr>
   <tr>
     <td class="mdl-data-table__cell--non-numeric">Description:</td>
-    <td class="mdl-data-table__cell--non-numeric"><input type="text" name="desc" id="desc"></td>
+    <td class="mdl-data-table__cell--non-numeric"><input type="text" name="desc" id="desc" minlength="5" maxlength="100"></td>
   </tr>
   <tr>
     <td class="mdl-data-table__cell--non-numeric">Image:</td>
-    <td class="mdl-data-table__cell--non-numeric"><input type="file" id="file"></td>
+    <td class="mdl-data-table__cell--non-numeric"><input type="file" id="file" accept=".png, .jpg"></td>
   </tr>
   <tr>
     <td colspan="2">
@@ -78,12 +79,17 @@
     </td>
   </tr>
 </table>
-</div>
+</form>
 
+</div>
 <div>
 <h3 align="center">profiles</h3>
-
- <input type="text" align="center" id="profilee" onkeyup="findProfile()" placeholder="Search for profiles by name..">
+ <select  id="tag" name="tag" > 
+  <option value="1" selected >Name</option> 
+  <option value="2" >Age</option>
+  <option value="3">Height</option>
+</select>
+ <input type="text" align="center" id="profilee" onkeyup="findProfile(tag.value)" placeholder="Search ">
 
 <table align="center" id="tbl_users_list" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp"">
   <tr>

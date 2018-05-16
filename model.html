@@ -9,19 +9,22 @@
     </head>
     <body>
         <div id="info">
+
   <div>
-    <input type="text" id="uname" name="name"  placeholder="Enter name">
+    <input type="text" id="uname" name="name"  placeholder="profile1">
+    <input type="text" id="unamee" name="name"  placeholder="profile2(optional)">
+
   </div>
   <div>
-    <button id="chose" onclick="chosee() "onfocus="this.value=''">Submit</button>
+    <button id="chose" onclick="chosee() "onfocus="this.value=''">View</button>
   </div>
         <br>  <br> <br>
-            <p align="left" id="namee">3d model of profilee</p> 
+            <p align="left" id="namee">3d model of profilee</p>
+            <p align="left" id="nameee">3d model of profilee</p>  
             <a href="addProfile.html" id="nav"  >Back</a>
-            <button id="pickpoint" onclick="calcDistance()">measure </button>
-            <button id="pauseani" onclick="pause()">pause/play</button>
+            <button id="pickpoint" style="display: none;"   onclick="calcDistance()">measure </button>
+            <button id="pauseani"  style="display: none;"   onclick="pause()">pause/play</button>
             <p   id="measure" style="n">Choose two points </p> 
-
         </div>
 
 
@@ -31,6 +34,11 @@
         <script src="load/stats.min.js"></script>
 
         <script>
+            let text = window.location.hash.substring(1);
+            if(text){
+               document.getElementById("uname").value=text;
+
+            }
             if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
             let container, stats;
             let camera, cameraTarget, scene, renderer;
@@ -38,7 +46,7 @@
             let filepath;
             let clickedd=true;
             let pausee=false;
-            let locationn;
+            let locationn,locationnn;
             let points=[];
             let temp;
            // if (count!=0){
@@ -48,6 +56,7 @@
             function init() {
               container = document.createElement( 'div' );
               document.getElementById("namee").innerHTML = document.getElementById("uname").value;
+              document.getElementById("nameee").innerHTML = document.getElementById("unamee").value;
               document.body.appendChild( container );
               camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 1, 15 );
               camera.position.set( 3, 0.15, 3 );
@@ -78,7 +87,7 @@
                 geometry.computeVertexNormals();
                 const material = new THREE.MeshStandardMaterial( { color: 0x0055ff, flatShading: true } );
                 const mesh = new THREE.Mesh( geometry, material );
-                // mesh.position.x =  -0.2;
+                mesh.position.x =  -0.2;
                 mesh.position.y =  0.45;
                 mesh.position.z =  0;
                 mesh.rotation.x = - Math.PI / 2;
@@ -87,6 +96,23 @@
                 // mesh.receiveShadow = true;
                 scene.add( mesh );
               } );
+
+              loader.load( locationnn, function ( geometry ) {
+                geometry.computeVertexNormals();
+                var material = new THREE.MeshStandardMaterial( { color: 0x0055ff, flatShading: true } );
+                var mesh = new THREE.Mesh( geometry, material );
+                mesh.position.y =  0.45;
+                mesh.position.z =  0.3;
+                mesh.position.x =  -0.7;
+                mesh.rotation.x = - Math.PI / 2;
+                mesh.scale.multiplyScalar( 0.6 );
+                mesh.castShadow = true;
+                mesh.receiveShadow = true;
+                scene.add( mesh );
+              } );
+
+
+
                 // Lights
               scene.add( new THREE.HemisphereLight( 0x443333, 0x111122 ) );
               addShadowedLight( 1, 1, 1, 0xffffff, 1.35 );
@@ -146,12 +172,11 @@
                                       ((points[4]-points[1])* (points[4]-points[1]))+
                                       ((points[5]-points[2])* (points[5]-points[2])))
                       //scaling to real world dimensions
-                      temp=(length/0.58)*100;
+                      temp=(length/0.60)*100;
                       temp =Math.round(temp * 100) / 100;
 
                       //console.log((length/0.58)*100);
                        document.getElementById("measure").innerHTML=temp + " cm";
-
                     }
 
                     count++;
@@ -211,12 +236,19 @@
 
           
             function chosee(){
-              locationn ="model/"
+              locationn ="model/";
               locationn += document.getElementById("uname").value ; 
-              console.log(locationn);
+              locationn += ".ply";
+              locationnn ="model/";
+              locationnn += document.getElementById("unamee").value ; 
+              locationnn += ".ply";
              // count++;
               document.getElementById("uname").style.display = "none";
+              document.getElementById("unamee").style.display = "none";
               document.getElementById("chose").style.display = "none";
+              document.getElementById("pickpoint").style.display = "block";
+              document.getElementById("pauseani").style.display = "block";
+
               init();
               animate();
 
