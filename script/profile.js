@@ -158,8 +158,12 @@ function findProfile(valuee) {
 
   // Loop through all table rows, and hide those who don't match the search query
   for (i = 1; i < tr.length; i++) {
+    if(value==1){
     td = tr[i].getElementsByTagName("td")[1];
-     
+     }
+      if(value==2){
+    td = tr[i].getElementsByTagName("td")[2];
+     }
     if (td) {
       if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
