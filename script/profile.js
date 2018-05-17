@@ -85,8 +85,8 @@ uploadTask.on('state_changed', function(snapshot){
 }, function() {
   // Handle successful uploads on complete
   // For instance, get the download URL: https://firebasestorage.googleapis.com/...
-   var downloadURL = uploadTask.snapshot.downloadURL;
-    var postKey=firebase.database().ref('Gallery/').push().key;
+  var downloadURL = uploadTask.snapshot.downloadURL;
+  var postKey=firebase.database().ref('Gallery/').push().key;
   var updates={};
   var postData={
     url: downloadURL,
@@ -96,7 +96,7 @@ uploadTask.on('state_changed', function(snapshot){
   updates['/gallery/'+postKey]=postData;
   firebase.database().ref().update(updates);
 
-  window.location.reload();
+//  window.location.reload();
 });
  //   console.log(downloadURL);
 
